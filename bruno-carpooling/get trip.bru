@@ -1,0 +1,15 @@
+meta {
+  name: get trip
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:8081/trips/2
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

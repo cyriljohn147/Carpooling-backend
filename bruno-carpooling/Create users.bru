@@ -1,0 +1,23 @@
+meta {
+  name: Create users
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8081/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "abhinav",
+    "email": "22eg105g27@anurag.edu.in",
+    "phone": "986332466"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
