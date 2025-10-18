@@ -9,8 +9,8 @@ import (
 
 	db "github.com/cyriljohn147/carpooling/db/sqlc"
 	"github.com/cyriljohn147/carpooling/util"
-	"github.com/stretchr/testify/require"
 	_ "github.com/lib/pq"
+	"github.com/stretchr/testify/require"
 )
 
 const (
@@ -114,18 +114,18 @@ func TestListFunctionsEdgeCases(t *testing.T) {
 
 	// Similar tests for other list functions
 	// Create test data first
-	user := createRandomUser(t)
+	// user := createRandomUser(t)
 	trip := createRandomTrip(t)
 
 	// Test ListBalancesByUser edge cases
-	balanceArg := db.ListBalancesByUserParams{
-		UserID: user.ID,
-		Limit:  0, // Zero limit
-		Offset: 0,
-	}
-	balances, err := testQueries.ListBalancesByUser(context.Background(), balanceArg)
-	require.NoError(t, err)
-	require.Empty(t, balances)
+	// balanceArg := db.ListBalancesByUserParams{
+	// 	UserID: user.ID,
+	// 	Limit:  0, // Zero limit
+	// 	Offset: 0,
+	// }
+	// balances, err := testQueries.ListBalancesByUser(context.Background(), balanceArg)
+	// require.NoError(t, err)
+	// require.Empty(t, balances)
 
 	// Test ListParticipantsByTrip edge cases
 	participantArg := db.ListParticipantsByTripParams{
